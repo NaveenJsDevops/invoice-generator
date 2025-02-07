@@ -1,6 +1,6 @@
 {
-  "name": "retail-invoice",
-  "homepage": "https://NaveenJsDevops.github.io/retail-invoice",
+  "name": "invoice-generator",
+  "homepage": "https://NaveenJsDevops.github.io/invoice-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
