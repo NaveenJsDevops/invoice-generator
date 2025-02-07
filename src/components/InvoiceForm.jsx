@@ -49,7 +49,7 @@ const InvoiceForm = () => {
   const [subTotal, setSubTotal] = useState("0.00");
   const [totalRoll, setTotalRoll] = useState("0.00");
   const [totalWeight, setTotalWeight] = useState("0.00");
-  const [totalRate, setTotalRate] = useState("0.00");
+  const [, setTotalRate] = useState("0.00");
   const [cgstRate, setCgstRate] = useState("");
   const [sgstRate, setSgstRate] = useState("");
   const [taxAmount, setTaxAmount] = useState("0.00");

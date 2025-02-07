@@ -65,7 +65,7 @@ const InvoiceModal = ({
               textAlign: "center",
             }}
           >
-            <h3 className="fw-bold" style={{ color: "red" }}>
+            <h3 className="fw-bold" style={{ color: "#2778f7" }}>
               {info.billFrom}
             </h3>
             <p>{info.billFromAddress}</p>
@@ -225,7 +225,7 @@ const InvoiceModal = ({
 
               {/* Table Body */}
               <tbody>
-                {[...Array(15)].map((_, i) => (
+                {[...Array(10)].map((_, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid white" }}>
                     {" "}
                     {/* Set row separator to white */}
@@ -300,7 +300,6 @@ const InvoiceModal = ({
                       {items[i]?.weight && items[i]?.price
                         ? (items[i]?.weight * items[i]?.price).toFixed(2)
                         : ""}{" "}
-                      {/* Leave it empty if any of the values are missing */}
                     </td>
                   </tr>
                 ))}
@@ -317,6 +316,7 @@ const InvoiceModal = ({
                       fontSize: "14px",
                       borderLeft: "1px solid black",
                       borderRight: "1px solid black",
+                      borderTop: "2px solid black"
                     }}
                   >
                     Total:
@@ -327,6 +327,7 @@ const InvoiceModal = ({
                       textAlign: "center",
                       borderLeft: "1px solid black",
                       borderRight: "1px solid black",
+                      borderTop: "2px solid black"
                     }}
                   >
                     {items.reduce(
@@ -340,6 +341,7 @@ const InvoiceModal = ({
                       textAlign: "center",
                       borderLeft: "1px solid black",
                       borderRight: "1px solid black",
+                      borderTop: "2px solid black"
                     }}
                   >
                     {items.reduce(
@@ -353,6 +355,7 @@ const InvoiceModal = ({
                       textAlign: "center",
                       borderLeft: "1px solid black",
                       borderRight: "1px solid black",
+                      borderTop: "2px solid black"
                     }}
                   >
                     {items.reduce(
@@ -366,6 +369,7 @@ const InvoiceModal = ({
                       textAlign: "center",
                       borderLeft: "1px solid black",
                       borderRight: "1px solid black",
+                      borderTop: "2px solid black"
                     }}
                   >
                     {items.reduce(
@@ -551,13 +555,13 @@ const InvoiceModal = ({
           {/* Net Amount in Words Section */}
           {total > 0 ? (
             <p
-              style={{ margin: "0", padding: "0", textTransform: "capitalize" }}
+              style={{ marginTop: "-1px", marginBottom: "5px" , paddingLeft: "8px", textTransform: "capitalize", border: '1px solid black' }}
             >
               <strong>Rupees {toWords(total)} Only</strong>
             </p>
           ) : (
             <p
-              style={{ margin: "0", padding: "0", textTransform: "capitalize" }}
+              style={{ marginTop: "-1px", marginBottom: "5px" , textTransform: "capitalize", border: '1px solid black'  }}
             >
               <strong> </strong>
             </p>
@@ -601,15 +605,15 @@ const InvoiceModal = ({
                   textDecoration: "underline",
                   fontSize: "12px",
                   fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginBottom: "5px" /* Reduced margin-bottom */,
+                  marginTop: "-6px",
+                  marginBottom: "6px" /* Reduced margin-bottom */,
                 }}
               >
                 Terms & Conditions:
               </h6>
               <ul
                 style={{
-                  fontSize: "10px",
+                  fontSize: "8px",
                   marginBottom: "2px",
                   paddingBottom: "0",
                 }}
@@ -628,7 +632,7 @@ const InvoiceModal = ({
                 paddingTop: "60px" /* Reduced padding */,
               }}
             >
-              <p style={{ fontSize: "8px", marginBottom: "0" }}>
+              <p style={{ fontSize: "8px", marginTop: "12px" }}>
                 Received (Seal and Sign)
               </p>
             </div>
@@ -642,6 +646,7 @@ const InvoiceModal = ({
               <p style={{ marginBottom: "0" }}>
                 For <strong>{info.billFrom}</strong>
               </p>
+              <br/>
               <p
                 style={{
                   fontSize: "8px",
